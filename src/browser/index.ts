@@ -46,7 +46,6 @@ function create_message(m: string) {
 }
 
 function receive_message(e: string) {
-    console.log(e)
     const m = Messages.decrypt(e)
     new_message(e, m)
 }
