@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name=description content="Tunny encoding messenger">
+    <title>Tunny</title>
+    <style>
+        html,
+        body {
+            margin: 0
+        }
+
+        #app {
+            display: flex;
+        }
+
+        #input,
+        #settings {
+            padding-bottom: 25px;
+            padding-top: 25px;
+        }
+
+        #settings {
+            display: flex;
+            flex-direction: column;
+        }
+
+        #message_box,
+        #settings textarea {
+            height: 100%;
+        }
+
+        #messages {
+            white-space: pre-line;
+            font-family: monospace;
+        }
+
+        #translations {
+            overflow-wrap: anywhere;
+        }
+
+        #history {
+            display: flex;
+            flex: 1;
+            width: 100%;
+            height: 100vh;
+        }
+
+        #history>div {
+            overflow-y: scroll;
+            padding-left: 25px;
+            padding-right: 5px;
+            height: 100%;
+            flex: 1
+        }
+    </style>
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+        window.socket = io();
+    </script>
+</head>
+
+<body>
+    <div id='app'>
+        <div style="display: flex; flex-direction: column;">
+            <div>
+                <button id="hide">settings</button>
+            </div>
+            <div style="display: flex; flex:1">
+                <div id="settings">
+                    <button id="connect">connect</button>
+                    <input id="room" />
+                    <button id="random">random</button>
+                </div>
+                <div id="input">
+                    <textarea id="message_box"></textarea>
+                </div>
+            </div>
+        </div>
+        <button id="send">Send</button>
+        <div id="history">
+            <div id="messages"></div>
+            <div id="translations"></div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>

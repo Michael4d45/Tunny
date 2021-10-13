@@ -1,0 +1,21 @@
+{
+    "compilerOptions": {
+        "lib": [
+            "es2019", 
+            "dom"
+        ],
+        "module": "commonjs",
+        "target": "es2019",
+    
+        "strict": true,
+        "esModuleInterop": true,
+        "skipLibCheck": true,
+        "forceConsistentCasingInFileNames": true,
+
+        "outDir": "./dist/",
+        "noImplicitAny": true,
+        "allowJs": true,
+        "moduleResolution": "node",
+        "sourceMap": true
+    }
+}
