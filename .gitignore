@@ -1,3 +1,5 @@
 .env
 node_modules
 makefile
+build/server.js
+build/client/app.js
