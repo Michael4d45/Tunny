@@ -4,6 +4,10 @@ A replication of the [Lorenze SZ Cypher](https://en.wikipedia.org/wiki/Cryptanal
 # Installation 
 Firstly create a .env file.
 - to install the libraries.
+    - `npm install`
+- to build production.
+    - `npm run prod`
+- to continuously build.
     - `npm run watch`
 - to run the server
     - `npm run serve`
